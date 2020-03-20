@@ -1,7 +1,7 @@
 // P3: Sa se realizeze un program care interschimba 2 valori folosind un pointer ca variabila auxiliara.
 
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
