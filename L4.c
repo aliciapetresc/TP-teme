@@ -15,6 +15,6 @@ int main()
 	a = b;
 	b = *n;
 	printf("a devine %d ; b devine %d\n", a, b);
-	system("pause");
+	system("pause"); 
 	return 0;
 }
