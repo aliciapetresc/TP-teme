@@ -85,14 +85,16 @@ int main() {
 	printf("Dati un numar: "); scanf("%u", &n);
 
 	// Daca n e mai mare decat valoare maxima
-	while (n > MAX_BASE10_SIZE) {
+	while (n > MAX_BASE10_SIZE) 
+	{
 		printf("\n%u depaseste valoarea maxima, introdu un alt numar: ", n);
 		scanf("%u", &n);
 	}
 
 	// b) + c) Transformare din zecimal in binar + Adaugarea fiecarui bit in stiva
 	unsigned int nr = n;
-	while (nr != 0) {
+	while (nr != 0) 
+	{
 		int c = nr % 2;
 		Push_Base2(c);
 		nr = nr / 2;	
@@ -100,7 +102,8 @@ int main() {
 	
 	// d) Adaugarea fiecarei cifre in stiva
 	nr = n;
-	while (nr != 0) {
+	while (nr != 0) 
+	{
 		int c = nr % 10;
 		Push_Base10(c);
 		nr = nr / 10;
@@ -108,7 +111,8 @@ int main() {
 
 	// Pentru ca tranformarea in cifre la b) si d) se face de la coada la cap, putem sa citim din nou, si sa comparam cu valoarea din stiva care este invers fata de valorea pe care o citim
 	nr = n;
-	while (nr != 0) {
+	while (nr != 0) 
+	{
 		int c = nr % 2;
 
 		if (Peek_Base2() != c) {
@@ -120,10 +124,12 @@ int main() {
 	}
 
 	nr = n;
-	while (nr != 0) {
+	while (nr != 0) 
+	{
 		int c = nr % 10;
 
-		if (Peek_Base10() != c) {
+		if (Peek_Base10() != c) 
+		{
 			printf("Numarul nu este palindrom in reprezentarea zecimala.\n");
 			return 0;
 		}
